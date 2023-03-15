@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Caluculator</title>
+<style>
+    *{
+        transition: all 1s;
+    }
+    body {
+        text-align: center;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: linear-gradient(red,white);
+    }
+    body:hover {
+        background-image: linear-gradient(white,red);
+    }
+    #container{
+        width: 360px;
+       background-color: rgba(10,115,115,0.19);
+       border-radius: 10px;
+       padding: 20px;
+       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),0 6px 6px rgba(0, 0, 0, 0.23);
+       box-shadow: 5px 5px 5px white;
+       position: relative;
+    }
+    #display{
+        width: 100%;
+        height: 35px;
+        font-size: 20px;
+        text-align: right;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        color:black;
+        border: none;
+       box-shadow: 2px 2px 2px white;
+    }
+    #button{
+        width: 70px;
+        height: 45px;
+        font-size: 23px;
+        border-radius: 5px;
+        background-color:red;
+        color: #e0e1dd;
+    }
+    #button:hover {
+        background-color: white;
+        color: black;
+    }
+    h1{
+        font-size: 220px;
+        color: white;
+        text-shadow: 10px 10px 10px black;
+        position: absolute;
+        left: 150px;
+    }
+    h1:hover {
+        color: black;
+        text-shadow: 10px 10px 10px white;
+    }
+</style>
+</head>
+<body>
+    <h1>Caluculator</h1>
+    <div id="container">
+        <form name="cform">
+            <input type="text" name="answer" id="display">
+            <br><br>
+            <input type="button" value="AC" id="button" onclick="cform.answer.value +='AC'">
+            <input type="button" value="DE" id="button" onclick="cform.answer.value +='DE'">
+            <input type="button" value="." id="button" onclick="cform.answer.value +='.'">
+            <input type="button" value="/" id="button" onclick="cform.answer.value +='/'">
+             <br><br>
+            <input type="button" value="7" id="button" onclick="cform.answer.value +='7'">
+            <input type="button" value="8" id="button" onclick="cform.answer.value +='8'">
+            <input type="button" value="9" id="button" onclick="cform.answer.value +='9'">
+            <input type="button" value="*" id="button" onclick="cform.answer.value +='*'">
+            <br><br> 
+            <input type="button" value="4" id="button" onclick="cform.answer.value +='4'">
+            <input type="button" value="5" id="button" onclick="cform.answer.value +='5'">
+            <input type="button" value="6" id="button" onclick="cform.answer.value +='6'">
+            <input type="button" value="-" id="button" onclick="cform.answer.value +='-'">
+            <br><br>
+            <input type="button" value="1" id="button" onclick="cform.answer.value +='1'">
+            <input type="button" value="2" id="button" onclick="cform.answer.value +='2'">
+            <input type="button" value="3" id="button" onclick="cform.answer.value +='3'">
+            <input type="button" value="+" id="button" onclick="cform.answer.value +='+'">
+            
+            <br><br>
+            <input type="button" value="00" id="button" onclick="cform.answer.value+='00'">
+            <input type="button" value="0" id="button" onclick="cform.answer.value+='0'">
+            <input type="button" value="Clear" id="button" onclick="cform.answer.value=' '">
+            <input type="button" value="=" id="button" onclick="cform.answer.value=eval(cform.answer.value)">
+        </form>
+    </div>
+</body>
+</html>
